@@ -1,7 +1,7 @@
+'''A dictionary of area codes'''
 
-
-d = {'rijswijk':('070','ZH'),
-     'leiden':('071','ZH')}
+d = {'rijswijk': ('070','ZH'),
+     'leiden': ('071','ZH')}
 
 d['amsterdam'] = '020', 'NH'
 d['utrecht'] = '030', 'UT'
@@ -11,7 +11,6 @@ d['eindhoven'] = '040', 'NB'
 d['groningen'] = '050', 'GR'
 d['zwolle'] = '053', 'OV'
 d['delft'] = '015', 'ZH'
-
 d['zwolle'] = '057', 'OV'
 
 plaats = input('Geef een plaats: ').lower()

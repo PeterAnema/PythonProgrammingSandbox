@@ -9,7 +9,7 @@ class Currency():
         self.__prefix = prefix
 
     def __repr__(self):
-        return str(self.__value)
+        return 'Euro(%.2f)' % (self.__value)
 
     def __str__(self):
         return '%s %.2f' % (self.__prefix, self.__value)
@@ -56,8 +56,7 @@ class Dollar(Currency):
         super().__init__(value, '$')
 
 
-
-#----------------------
+# ----------------------------------------- client code
 
 if __name__ == '__main__':
 

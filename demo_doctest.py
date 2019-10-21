@@ -1,5 +1,3 @@
-import doctest
-
 def cube(n):
     """
     :param n: a number to take the cube of
@@ -16,5 +14,5 @@ def cube(n):
 
 
 if __name__ == "__main__":
-
+    import doctest
     doctest.testmod(verbose=True)
