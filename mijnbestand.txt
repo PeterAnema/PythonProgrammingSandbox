@@ -1,0 +1,7 @@
+regel1,1,2
+regel2,5,3
+regel3,3,2
+regel4,9,5
+regel5,2,6
+regel6,5,7
+regel7,3,3

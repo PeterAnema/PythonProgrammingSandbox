@@ -1,0 +1,24 @@
+2017-11-15 22:51:26 990 - root - DEBUG - This message should go to the log file
+2017-11-15 22:51:26 991 - root - INFO - So should this
+2017-11-15 22:51:26 991 - root - WARNING - And this, too
+2017-11-15 22:51:26 991 - root - WARNING - Watch out!
+2017-11-15 22:51:26 991 - root - INFO - I told you so
+2017-11-15 22:51:26 991 - root - CRITICAL - ERROR!!!!!
+2017-11-15T22:55:09.075 - root - DEBUG - This message should go to the log file
+2017-11-15T22:55:09.075 - root - INFO - So should this
+2017-11-15T22:55:09.075 - root - WARNING - And this, too
+2017-11-15T22:55:09.075 - root - WARNING - Watch out!
+2017-11-15T22:55:09.075 - root - INFO - I told you so
+2017-11-15T22:55:09.076 - root - CRITICAL - ERROR!!!!!
+2018-09-14T10:54:12.789 - root - DEBUG - This message should go to the log file
+2018-09-14T10:54:12.789 - root - INFO - So should this
+2018-09-14T10:54:12.789 - root - WARNING - And this, too
+2018-09-14T10:54:12.789 - root - WARNING - Watch out!
+2018-09-14T10:54:12.789 - root - INFO - I told you so
+2018-09-14T10:54:12.789 - root - CRITICAL - ERROR!!!!!
+2018-11-02T12:09:32.961 - root - DEBUG - This message should go to the log file
+2018-11-02T12:09:32.963 - root - INFO - So should this
+2018-11-02T12:09:32.963 - root - WARNING - And this, too
+2018-11-02T12:09:32.963 - root - WARNING - Watch out!
+2018-11-02T12:09:32.963 - root - INFO - I told you so
+2018-11-02T12:09:32.963 - root - CRITICAL - ERROR!!!!!

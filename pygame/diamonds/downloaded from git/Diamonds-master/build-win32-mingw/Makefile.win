@@ -1,0 +1,48 @@
+# Project: Editor
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = ../obj/Editor_private.res
+OBJ  = ../obj/Levelset.o ../obj/Settings.o ../obj/Constants.o ../obj/EditorApp.o ../obj/EditorFrame.o ../obj/SDL_util.o $(RES)
+LINKOBJ  = ../obj/Levelset.o ../obj/Settings.o ../obj/Constants.o ../obj/EditorApp.o ../obj/EditorFrame.o ../obj/SDL_util.o $(RES)
+LIBS =  -L"lib" -mwindows -lmingw32 -lSDLmain -lSDL -lSDL_image -lSDL_ttf -lwxmsw28_core -lwxbase28 -lcomdlg32 -luser32 -lgdi32 -lole32 -lwsock32 -lcomctl32 -lctl3d32 -lgcc -lstdc++ -lshell32 -loleaut32 -ladvapi32 -luuid  -s 
+INCS =  -I"include" 
+CXXINCS =  -I"C:/Dev-Cpp/include/c++/3.4.5/backward"  -I"C:/Dev-Cpp/include/c++/3.4.5/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.5"  -I"C:/Dev-cpp/include/SDL"  -I"include" 
+BIN  = ../../editor.exe
+CXXFLAGS = $(CXXINCS)   -Wall
+CFLAGS = $(INCS)   -Wall
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before ../../editor.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "..\..\editor.exe" $(LIBS)
+
+../obj/Levelset.o: ../Levelset.cpp
+	$(CPP) -c ../Levelset.cpp -o ../obj/Levelset.o $(CXXFLAGS)
+
+../obj/Settings.o: ../Settings.cpp
+	$(CPP) -c ../Settings.cpp -o ../obj/Settings.o $(CXXFLAGS)
+
+../obj/Constants.o: ../Constants.cpp
+	$(CPP) -c ../Constants.cpp -o ../obj/Constants.o $(CXXFLAGS)
+
+../obj/EditorApp.o: ../EditorApp.cpp
+	$(CPP) -c ../EditorApp.cpp -o ../obj/EditorApp.o $(CXXFLAGS)
+
+../obj/EditorFrame.o: ../EditorFrame.cpp
+	$(CPP) -c ../EditorFrame.cpp -o ../obj/EditorFrame.o $(CXXFLAGS)
+
+../obj/SDL_util.o: ../SDL_util.cpp
+	$(CPP) -c ../SDL_util.cpp -o ../obj/SDL_util.o $(CXXFLAGS)
+
+../obj/Editor_private.res: Editor_private.rc 
+	$(WINDRES) -i Editor_private.rc --input-format=rc -o ../obj/Editor_private.res -O coff 
