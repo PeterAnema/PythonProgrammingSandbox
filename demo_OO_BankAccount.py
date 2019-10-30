@@ -1,5 +1,5 @@
 
-class BankAccount:
+class BankAccount(object):
 
     def __init__(self, name):
         self.accountHolder = name

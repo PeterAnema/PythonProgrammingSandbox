@@ -3,7 +3,7 @@ import math
 class Vector:
     """A vector class"""
 
-    __slots__ = ['x', 'y']
+    __slots__ = ['_x', '_y']
 
     def __init__(self, x, y):
         self._x = x
@@ -41,24 +41,27 @@ class Vector:
 
     def magnitude(self):
         return (self._x ** 2 + self._y ** 2) ** 0.5
+    def length(self):
+        return self.magnitude()
 
-    def angle(self):
-        return math.atan(self._y / self._x)
+    def angle(self, degrees=False):
+        a = math.atan(self._y / self._x)
+        if degrees:
+            return math.degrees(a)
+        else:
+            return a
 
 # =========================================
 
 v1 = Vector(2,2)
 v2 = Vector(-1,3)
 
-print(v1)
-print(v2)
+print('v1 is %s' % v1)
+print('v2 is %s' % v2)
 
 v3 = v1 + v2
 
-print(v3)
+print('v1 + v2 is %s' % v3)
 
-print(v3 == Vector(1,5))
-
-print("magnitude: %s, angle: %s" % (v3.magnitude(), v3.angle()))
-
-print(abs(v3))
+print('angle of v1 is %g°' % v1.angle(degrees=True))
+print('length of v1 is %g' % v1.length())

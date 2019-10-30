@@ -49,7 +49,7 @@ def from_string(s, quotechar ='"'):
 # -------------------------------------------------------
 # txt
 
-filename = 'persistence.txt'
+filename = 'demo_persistence.txt'
 
 delimiter = ': '
 quotechar = '"'
@@ -70,7 +70,7 @@ print('txt: ', groceries_restored)
 # -------------------------------------------------------
 # csv
 
-filename = 'persistence.csv'
+filename = 'demo_persistence.csv'
 
 import csv
 
@@ -101,7 +101,7 @@ print('csv: ', groceries_restored)
 # -------------------------------------------------------
 # json
 
-filename = 'persistence.json'
+filename = 'demo_persistence.json'
 
 import json
 
@@ -117,7 +117,7 @@ print('json: ', groceries_restored)
 # -------------------------------------------------------
 # pickle
 
-filename = 'persistence.pickle'
+filename = 'demo_persistence.pickle'
 
 import pickle
 

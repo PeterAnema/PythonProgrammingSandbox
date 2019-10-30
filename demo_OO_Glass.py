@@ -1,5 +1,5 @@
 
-class Glass:
+class Glass(object):
 
     def __init__(self, volume = 100.0):
         self.__volume = volume

@@ -26,5 +26,5 @@ def find_primes(number_of_primes):
 # -------------------------------------------------------
 
 if __name__ == '__main__':
-    for p in find_primes(100000):
+    for p in find_primes(30000):
         print(p)

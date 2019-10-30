@@ -8,7 +8,7 @@ while True:
         break
 
 print('\nEntered names:')
-for name in sorted(names):
+for name in sorted(names, key=str.lower):
     print(name)
 
 

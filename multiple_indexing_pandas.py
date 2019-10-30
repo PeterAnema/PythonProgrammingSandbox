@@ -6,7 +6,7 @@ df = pd.read_csv(filename)
 
 print(df)
 
-df_selection = df[(df['l1']=='w2') & (df['l2']=='f1')]
+df_selection = df[(df['l1'] == 'w2') & (df['l2'] == 'f1')]
 
 print(df_selection)
 
