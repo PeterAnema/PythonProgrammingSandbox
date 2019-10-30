@@ -27,12 +27,9 @@ print()
 # ##
 for word, n in sorted(d.items(), key = lambda item: item[1], reverse = True):
     print("%-20s: %s %d" % (word, "\u2588" * n, n))
-# ##
+
 # ## of ...
 # ##
-# ##from operator import itemgetter
-# ##for word, n in sorted(d.items(), key = itemgetter(1), reverse = True):
-# ##    print("%-20s: %s %d" % (word, "\u2588" * n, n))
-#
-#
-#
+# from operator import itemgetter
+# for word, n in sorted(d.items(), key = itemgetter(1), reverse = True):
+#    print("%-20s: %s %d" % (word, "\u2588" * n, n))

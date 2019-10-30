@@ -1,7 +1,7 @@
 import re
 from datetime import datetime, timedelta
 
-filename = 'log.txt'
+filename = 'example.log'
 
 pattern = input('Geef tekst om op te filteren: ')
 regex = re.compile(pattern, re.IGNORECASE + re.DOTALL)

@@ -42,7 +42,7 @@ def min_max(*numbers):
 
 if __name__ == '__main__':
 
-    print(maximum(2,8,3,4))
-    print(minimum(2,8,3,4))
+    print(maximum(2, 8, 3, 4))
+    print(minimum(2, 8, 3, 4))
 
-    print(min_max(9,6,23,46,234,678,12,342))
+    print(min_max(9, 6, 23, 46, 234, 678, 12, 342))
