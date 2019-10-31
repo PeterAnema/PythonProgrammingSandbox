@@ -61,5 +61,5 @@ class WrittenNumber():
 
 if __name__ == '__main__':
 
-    for number in range(1, 2300):
+    for number in range(1, 1001):
         print(WrittenNumber(number))

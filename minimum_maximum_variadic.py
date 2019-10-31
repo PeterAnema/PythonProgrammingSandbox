@@ -23,7 +23,7 @@ def minimum(*numbers):
         return None
 
 
-def min_max(*numbers):
+def minimum_maximum(*numbers):
     """Determine minimum and maximum value of a variadic list of arguments"""
     if numbers:
         min_value = numbers[0]
@@ -45,4 +45,4 @@ if __name__ == '__main__':
     print(maximum(2, 8, 3, 4))
     print(minimum(2, 8, 3, 4))
 
-    print(min_max(9, 6, 23, 46, 234, 678, 12, 342))
+    print(minimum_maximum(9, 6, 23, 46, 234, 678, 12, 342))

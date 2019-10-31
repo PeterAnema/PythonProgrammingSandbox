@@ -5,7 +5,7 @@ class VectorTest(unittest.TestCase):
 
     def test_can_create_vector(self):
 
-        v = Vector(1,1)
+        v = Vector(1, 1)
 
         self.assertEqual(v.x, 1)
         self.assertEqual(v.y, 1)
@@ -15,7 +15,7 @@ class VectorTest(unittest.TestCase):
 
         v = Vector(2, 2)
 
-        self.assertEqual('Vector(2,2)', str(v))
+        self.assertEqual('Vector(2, 2)', repr(v))
 
 
     def test_can_add_vectors(self):
@@ -25,7 +25,7 @@ class VectorTest(unittest.TestCase):
 
         v3 = v1 + v2
 
-        self.assertEqual((v3.x, v3.y), (0, 4))
+        self.assertEqual(Vector(0, 4), v3)
 
     def test_can_compare_vectors(self):
 

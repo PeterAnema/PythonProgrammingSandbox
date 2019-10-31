@@ -2,24 +2,35 @@ import math
 from functools import reduce
 import turtle
 
-class Vector:
+
+class Vector(object):
     """A vector class"""
-    
+
+    __slots__ = ['_x', '_y']
+
     def __init__(self, x, y):
         self._x = float(x)
         self._y = float(y)
-    
+
+    @property
+    def x(self):
+        return self._x
+
+    @property
+    def y(self):
+        return self._y
+
     def __str__(self):
-        return "(%g,%g)" % (self._x, self._y)
+        return "(%g, %g)" % (self._x, self._y)
     
     def __repr__(self):
-        return "Vector (%g,%g)" % (self._x, self._y)
+        return "Vector(%g, %g)" % (self._x, self._y)
 
     def __eq__(self, other):
-        return self.length() == other.length()
+        return self._x == other.x and self._y == other.y
         
     def __ne__(self, other):
-        return self.length() != other.length()
+        return not self.__eq__(other)
         
     def __lt__(self, other):
         return self.length() < other.length()
@@ -34,10 +45,10 @@ class Vector:
         return self.length() >= other.length()
 
     def __add__(self, other):
-        return Vector(self._x + other._x, self._y + other._y)
+        return Vector(self._x + other.x, self._y + other.y)
 
     def __sub__(self, other):
-        return Vector(self._x - other._x, self._y - other._y)
+        return Vector(self._x - other.x, self._y - other.y)
 
     def __abs__(self):
         return self.magnitude()
@@ -135,10 +146,18 @@ if __name__ == "__main__":
     v1 = Vector(10,20)
     v2 = Vector(30,40)
 
-    print(v1.length())
-    print(v2.length())
+    print(f'v1 = {v1}')
+    print(f'v2 = {v2}')
 
-    print("v1 is longer" if v1 > v2 else "v2 is longer" if v2 > v1 else "v1 and v2 are equal")
+    print(f'length of v1 = {v1.length()}')
+    print(f'length of v2 = {v2.length()}')
+
+    if v1 > v2:
+        print("v1 is longer")
+    elif v2 > v1:
+        print("v2 is longer")
+    else:
+        print("v1 and v2 are equal")
 
     p1 = Path(v1,v2)
 
@@ -154,8 +173,13 @@ if __name__ == "__main__":
 
     print("p1 is longer" if p1 > p2 else "p2 is longer" if p2 > p1 else "p1 and p2 are equal")
 
-
-    p3 = Path((100,100), (50,-100), (-300, -200), (100,100), (-100,100))
+    p3 = Path(( 100,  100),
+              (  50, -100),
+              (-300, -200),
+              ( 100,  100),
+              ( 100,  100),
+              (  50,  100))
 
     p3.turtle()
+
     turtle.done()

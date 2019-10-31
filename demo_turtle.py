@@ -1,6 +1,6 @@
 import turtle as t
 
-t.color('red', 'yellow')
+t.color('red', 'green')
 t.begin_fill()
 while True:
     t.forward(200)
