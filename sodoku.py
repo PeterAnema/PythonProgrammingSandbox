@@ -126,7 +126,7 @@ if __name__ == '__main__':
 ....1....
 ...6.3.7.
 5..2.....
-1.4......'''.replace('\n','')
+1.4......'''.replace('\n','').replace(' ','')
 
     display(grid_values(grid2))
     print()
