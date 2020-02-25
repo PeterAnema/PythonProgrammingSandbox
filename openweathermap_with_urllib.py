@@ -13,7 +13,7 @@ url += '&q=' + city
 print(url)
 
 site = urllib.request.urlopen(url)
-response = str(site.read(), encoding='utf-8')
+response = str(site.read(), encoding = 'utf-8')
 
 print(response)
 

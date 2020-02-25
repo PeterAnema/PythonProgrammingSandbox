@@ -9,6 +9,7 @@ conn = pyodbc.connect('DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=' +
 cursor = conn.cursor()
  
 sql = 'SELECT * FROM klanten ORDER BY naam;'
+
 for row in cursor.execute(sql): # cursors are iterable
     print("{}, {}".format(row.naam, row.woonplaats))
  

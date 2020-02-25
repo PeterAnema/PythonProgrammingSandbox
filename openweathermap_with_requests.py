@@ -13,22 +13,33 @@ url += "&q=" + city
 print(url)
 
 try:
-    r = requests.get(url)
+    response = requests.get(url)
 
 except Exception as err:
     print("Cannot connect to " + url)
     print(err)
 
 else:
-    print(r.text)
+    print(response.text)
 
-    if (r.status_code == 200):
-        responseDict = json.loads(r.text)
-        temperature = responseDict["main"]["temp"]
-        print("Temparture in %s is %.0f°" % (city, temperature))
+    if (response.status_code == 200):
 
-    elif (r.status_code == 404):
+        body = response.text
+
+        print(response.status_code)
+        print(body)
+
+        decoded = json.loads(body)
+
+        temperature = decoded['main']['temp']
+        description = decoded['weather'][0]['description']
+
+        print(f'Weather in {city} is {description}. Temperatuur is {temperature}.')
+
+    elif response.status_code == 404:
         print("%s not found" % (city))
 
     else:
         print("error for city %s" % (city))
+
+

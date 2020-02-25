@@ -13,6 +13,6 @@ else:
 window = tkinter.Tk()
 window.wm_withdraw() 
 
-tekst = sd.askstring( title="Input",prompt="Email Address?")
+tekst = sd.askstring( title="Input", prompt="Email Address?")
 
 mbox.showinfo(title = "Greetings", message = tekst)

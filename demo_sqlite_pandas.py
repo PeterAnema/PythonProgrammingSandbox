@@ -28,8 +28,6 @@ connection.commit()
 selection_query = "SELECT date, city, temperature, destination \
                    FROM temp_data WHERE Date >= 20190101"
 
-
-
 retrieved = pd.read_sql_query(selection_query, connection)
 print(retrieved)
 

@@ -7,17 +7,17 @@ while True:
     else:
         break
 
-FILENAME = 'stored_names.txt'
+filename = 'stored_names.txt'
 
 try:
 
-    print('\nStoring names in %s' % FILENAME)
-    with open(FILENAME, 'a') as f:
+    print('\nStoring names in %s' % filename)
+    with open(filename, 'a') as f:
         for name in names:
             f.write('%s\n' % name)
 
     print('\nReading names:')
-    with open(FILENAME) as f:
+    with open(filename) as f:
         for line in f:
             name = line.rstrip('\n')
             print(name)
