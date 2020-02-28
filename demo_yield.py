@@ -25,11 +25,11 @@ for i in f1(10):
 for i in f2(10):
     print(i)
 
-for i in f3(10):
-    print(i)
-
-print(sum(f1(10)))
-print(sum(f2(10)))
-print(sum(f3(10)))
+# for i in f3(10):
+#     print(i)
+#
+# print(sum(f1(10)))
+# print(sum(f2(10)))
+# print(sum(f3(10)))
 
 

@@ -46,7 +46,7 @@ class Session(Thread):
 
             response = ''
             while True:
-                prompt = 'Wat kan ik voor je doen, %s? ' % self.__name
+                prompt = 'What can I do for you, %s? ' % self.__name
                 received = self.prompt_client_for_response(response + '\n' + prompt, logging = True)
                 if received.lower() == 'close':
                     break
