@@ -14,9 +14,9 @@ class Person(object):
                                                                   self.age)
 
     def __repr__(self):
-        return "Person('%s', '%s', '%d')" % (self.name,
-                                             self.residence,
-                                             self.age)
+        return "Person('%s', '%s', %d)" % (self.name,
+                                           self.residence,
+                                           self.age)
 
     def __eq__(self, other):
         return self.age == other.age
@@ -48,10 +48,23 @@ class Client(Person):
 
 # ------------------
 
-people = []
-people.append( Person("Peter", "Amstelveen",62) )
-people.append( Person("Peter", "Amstelveen",65) )
-people.append( Person("Petra", "Amstelveen", 61) )
+p1 = Person('Albert', 'USA', 87)
+p2 = Person('Peter', 'Lhee', 63)
 
-for p in sorted(people, key = lambda e: e.name):
-    print(p)
+print(repr(p1))
+print(repr(p2))
+
+print(p1 == p2)
+print(p1 != p2)
+print(p1 > p2)
+print(p1 >= p2)
+print(p1 < p2)
+print(p1 <= p2)
+
+# people = []
+# people.append( Person("Peter", "Amstelveen",62) )
+# people.append( Person("Peter", "Amstelveen",65) )
+# people.append( Person("Petra", "Amstelveen", 61) )
+#
+# for p in sorted(people, key = lambda e: e.name):
+#     print(p)

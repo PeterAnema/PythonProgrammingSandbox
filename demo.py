@@ -1,1 +1,5 @@
-d = {'nl':'+31', 'b':'+32', 'd':'+44'}
+from decimal import Decimal
+
+d1 = Decimal('0.1')
+d2 = Decimal('0.2')
+result = float(d1 + d2)

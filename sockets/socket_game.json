@@ -1,0 +1,57 @@
+{
+  "name": "Peter's Game",
+  "prompt": "\nWhat do you want to do? > ",
+  "new_player": {
+    "message": "Welcome to my adventure game. Type [start] to begin.",
+    "start_position": "start",
+    "inventory_items": ["key"]
+  },
+  "locations": {
+    "start": {
+      "description": "Welcome to my adventure game. Type [start] to begin.",
+      "commands": {
+        "start": {
+          "message": "Let the game begin.",
+          "move": "heavy_wooden_door"
+        }
+      }
+    },
+    "heavy_wooden_door": {
+      "description": "You are standing in front of a large heavy wooden door.",
+      "commands": {
+        "open": {
+          "message": "",
+          "move": "heavy_wooden_door_open"
+        }
+      }
+    },
+    "heavy_wooden_door_open": {
+      "description": "The large heavy wooden door opens slowly to a dark room.",
+      "commands": {
+        "enter": {
+          "message": "",
+          "move": "dark_room"
+        }
+      }
+    },
+    "dark_room": {
+      "description": "You can not see much in this darkness. Next to the door you discover a switch.",
+      "commands": {
+        "switch on": {
+          "message": "",
+          "move": "lights_on"
+        }
+      }
+    },
+    "lights_on": {
+      "description": "That's better.",
+      "commands": {
+        "switch off": {
+          "message": "",
+          "move": "dark_room"
+        }
+      }
+    }
+  }
+
+}

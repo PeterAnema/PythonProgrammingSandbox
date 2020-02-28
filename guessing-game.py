@@ -1,11 +1,11 @@
 import random
 
-LOWER = 1
-UPPER = 99
+lower = 1
+upper = 99
 
-print(f'Guess a number between {LOWER} and {UPPER}')
+magic_number = random.randint(lower, upper)
 
-magic_number = random.randint(LOWER, UPPER)
+print(f'Guess a number between {lower} and {upper}')
 
 number_of_guesses = 0
 while True:
@@ -20,5 +20,5 @@ while True:
         print('higher ...')
 
     elif guess == magic_number:
-        print('YEAAAH! You guessed it in %d guesses' % number_of_guesses)
+        print(f'YEAAAH! You guessed it in {number_of_guesses} guesses')
         break

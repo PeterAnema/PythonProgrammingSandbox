@@ -4,10 +4,11 @@ with open(filename) as f:
 
     headers = f.readline().rstrip("\n").split(';')
     print(headers)
+
     for line in f:
         columns = line.rstrip("\n").split(';')
 
-        d = dict(zip(headers,columns))
+        d = dict(zip(headers, columns))
 
         if d['city'] in ('Montreal', 'Vancouver'):
 
