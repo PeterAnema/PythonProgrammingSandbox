@@ -49,6 +49,7 @@ class App(QWidget):
                                    'color: #66ff66;;'
                                    'background-color: #222222;'
                                    'border: 2px solid #111111;'
+                                   'border-radius: 6px;'
                                    'padding-right: 4px;'
                                    'text-align: right;')
 
@@ -73,7 +74,7 @@ class App(QWidget):
                 button = QPushButton(button_label)
                 button.setStyleSheet('font-size: 40px;'
                                      'background-color: #ffffff;'
-                                     'border: 2px solid #222222;'
+                                     'border: 2px solid #888888;'
                                      'border-radius: 6px;'
                                      'text-align: center;'
                                      'vertical-align: middle')
