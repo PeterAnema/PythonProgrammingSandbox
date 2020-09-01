@@ -29,7 +29,7 @@ else:
         print(response.status_code)
         print(body)
 
-        decoded = json.loads(body)
+        decoded = response.json()
 
         temperature = decoded['main']['temp']
         description = decoded['weather'][0]['description']

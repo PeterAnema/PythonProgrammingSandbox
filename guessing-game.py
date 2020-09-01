@@ -1,7 +1,7 @@
 import random
 
 lower = 1
-upper = 99
+upper = 100
 
 magic_number = random.randint(lower, upper)
 
@@ -11,6 +11,7 @@ number_of_guesses = 0
 while True:
 
     guess = int(input('What is your next guess? '))
+
     number_of_guesses += 1
 
     if guess > magic_number:

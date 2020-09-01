@@ -21,30 +21,32 @@ The Python 2 language, i.e. Python 2.7.x, was officially discontinued on 1 Janua
 #     replace(']', ' ')
 
 ## or
-s = s.lower().translate(str.maketrans('', '', '.,!?()[]'))
+# s = s.lower().translate(str.maketrans('', '', '.,!?()[]'))
 
 ## or
-# s = re.sub('[^a-z\s]', ' ', s.lower())
+s = re.sub('[^a-z\s]', ' ', s.lower())
 
 words = s.split()
 unique_words = set(words)
 
-d = {}
+d = dict()
 for word in sorted(unique_words):
-    d[word] = words.count(word)
+    if not word.isdecimal():
+        d[word] = words.count(word)
+
+
+# print(d)
 
 ## or
 ##
-d = {}
-for word in words:
-    d[word] = d.get(word, 0) + 1
+# d = {}
+# for word in words:
+#     d[word] = d.get(word, 0) + 1
 
 
 # ## or
 # ##
 # d = {word: words.count(word) for word in sorted(unique_words)}
-
-print(d)
 
 print("Number of words %d" % len(words))
 print("Number of unique words %d" % len(unique_words))
@@ -53,17 +55,17 @@ print()
 # for word, n in d.items():
 #    print(f'{word}: {n}')
 
-# ## or ...
-# ##
+## or ...
+##
 # for word, n in d.items():
 #    print(f'{word:20} {n:3} {"*" * n}')
 
-# ## or ...
-# ##
+## or ...
+##
 for word, n in sorted(d.items(), key = lambda item: item[1], reverse = True):
     block_character = '\u2588'
-    print(f'{word:20} {n:3} {block_character * n}')
-    # print("%-20s: %s %d" % (word, "\u2588" * n, n))
+    print('%-20s: %s %d' % (word, block_character * n, n))
+    # print(f'{word:20} {n:3} {block_character * n}')
 
 # ## or ...
 # ##

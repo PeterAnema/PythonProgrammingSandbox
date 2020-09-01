@@ -8,8 +8,8 @@ while True:
         break
 
 print('\nEntered names:')
-for name in sorted(names, key=str.lower):
-    print(name)
+for name in sorted(names, key=len):
+    print(name.title())
 
 
 

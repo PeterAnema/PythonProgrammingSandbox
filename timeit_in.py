@@ -18,8 +18,8 @@ if __name__ == '__main__':
 
     r = random.sample(range(low, high+1), n)
     s = set(r)
-    l = list(s)
-    t = tuple(s)
+    l = list(r)
+    t = tuple(r)
 
     number = random.randint(low, high)
 
