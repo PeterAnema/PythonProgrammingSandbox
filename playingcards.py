@@ -1,4 +1,4 @@
-import random
+import demo_random
 
 # number of cards to deal
 n = 5
@@ -14,7 +14,7 @@ deck = [r + s for s in SUITS for r in RANKS]
 print(deck)
 
 # shuffle the deck (with random.shuffle())
-random.shuffle(deck)
+demo_random.shuffle(deck)
 
 # take 5 cards off the deck (with pop()) and put in a hand
 hand = [deck.pop() for __ in range(n)]

@@ -1,4 +1,4 @@
-import random
+import demo_random
 import sys
 
 class GuessingGame:
@@ -6,7 +6,7 @@ class GuessingGame:
     def __init__(self, low = 1, high = 99):
         self.__low = low
         self.__high = high
-        self.__magic_number = random.randint(low, high)
+        self.__magic_number = demo_random.randint(low, high)
         self.__number_of_guesses = 0
 
     def guess(self, guess):
@@ -89,7 +89,7 @@ class AutoPlayGuessingGameRandom(AutoPlayGuessingGame):
         super().__init__(*args, **kwargs)
         
     def guess(self):
-        return random.randint(self._low, self._high)
+        return demo_random.randint(self._low, self._high)
 
 
 # ----------------------------------------------------------

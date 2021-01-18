@@ -10,8 +10,8 @@ def central_measures(numbers):
 
 
 if __name__ == '__main__':
-    import random
-    numbers = [round(random.gauss(50, 20)) for __ in range(100)]
+    import demo_random
+    numbers = [round(demo_random.gauss(50, 20)) for __ in range(100)]
 
     mean, median, mode = central_measures(numbers)
 

@@ -1,9 +1,9 @@
-import random
+import demo_random
 
 lower = 1
 upper = 100
 
-magic_number = random.randint(lower, upper)
+magic_number = demo_random.randint(lower, upper)
 
 print(f'Guess a number between {lower} and {upper}')
 

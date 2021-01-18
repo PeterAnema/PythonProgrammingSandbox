@@ -31,7 +31,7 @@ def find_primes(n = None):
 # -------------------------------------------------------
 
 try:
-    for p in find_primes():
+    for p in find_primes(300000):
         print(p)
 
 except KeyboardInterrupt:

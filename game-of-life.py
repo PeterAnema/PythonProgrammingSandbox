@@ -17,7 +17,7 @@ import tkinter.filedialog as tkf
 import tkinter.font as tkfont
 import tkinter.simpledialog as tkd
 import sys
-import random
+import demo_random
 
 
 def load_board_from_file(filename=None):
@@ -43,7 +43,7 @@ def create_random_board(density):
 
     for row in range(len(board)):
         for col in range(len(board[0])):
-            r = random.randrange(100)
+            r = demo_random.randrange(100)
             if r > density:
                 board[row][col] = "."
             else:

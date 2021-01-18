@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import collections
 import itertools
-import random
+import demo_random
 
 SUITS = ('♣', '♢', '♡', '♠')
 RANKS = ('2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace')
@@ -19,7 +19,7 @@ class deck(set):
         for rank, suit in itertools.product(RANKS, SUITS):
             self.add(card(rank, suit))
     def get_card(self):
-        a_card = random.sample(self, 1)[0]
+        a_card = demo_random.sample(self, 1)[0]
         self.remove(a_card)
         return a_card
     def get_hand(self, number_of_cards=5):

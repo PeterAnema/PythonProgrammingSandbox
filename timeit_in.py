@@ -1,4 +1,4 @@
-import random
+import demo_random
 from timeit import timeit
 
 def function1():
@@ -16,12 +16,12 @@ if __name__ == '__main__':
     high = 999999
     n = 2000
 
-    r = random.sample(range(low, high+1), n)
+    r = demo_random.sample(range(low, high + 1), n)
     s = set(r)
     l = list(r)
     t = tuple(r)
 
-    number = random.randint(low, high)
+    number = demo_random.randint(low, high)
 
     print( timeit(function1) )
     print( timeit(function2) )

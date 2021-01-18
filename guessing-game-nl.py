@@ -1,8 +1,8 @@
-import random
+import demo_random
 
 print("Raad een getal tussen 1 en 99")
 
-geheim_getal = random.randint(1, 99)
+geheim_getal = demo_random.randint(1, 99)
 
 aantal_pogingen = 0
 while True:

@@ -1,4 +1,4 @@
-import random
+import demo_random
 from collections import Counter
 from operator import itemgetter
 from timeit import timeit
@@ -27,7 +27,7 @@ if __name__ == '__main__':
     high = 1000
     n = 2000
 
-    l = list(random.choices(range(low, high+1), k=n))
+    l = list(demo_random.choices(range(low, high + 1), k=n))
 
     print( function1() )
     print( function2() )

@@ -10,7 +10,7 @@ with open(filename) as f:
 
         d = dict(zip(headers, columns))
 
-        if d['city'] in ('Montreal', 'Vancouver'):
+        if d['city'] in ('Montreal'):
 
             print("{:10} {:15} {:20} {:30}".format(d['first_name'],
                                                    d['last_name'],

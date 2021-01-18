@@ -34,6 +34,7 @@ for word in sorted(unique_words):
     if not word.isdecimal():
         d[word] = words.count(word)
 
+print(d)
 
 # print(d)
 
@@ -62,10 +63,10 @@ print()
 
 ## or ...
 ##
-for word, n in sorted(d.items(), key = lambda item: item[1], reverse = True):
+for word, n in sorted(d.items(), key=lambda item: item[1], reverse=True):
     block_character = '\u2588'
-    print('%-20s: %s %d' % (word, block_character * n, n))
-    # print(f'{word:20} {n:3} {block_character * n}')
+    # print('%-20s: %s %d' % (word, block_character * n, n))
+    print(f'{word:20} {n:3} {block_character * n}')
 
 # ## or ...
 # ##

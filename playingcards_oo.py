@@ -1,4 +1,4 @@
-from random import shuffle
+from demo_random import shuffle
 
 SUITS = ('♣', '♢', '♡', '♠')
 RANKS = ('2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace')

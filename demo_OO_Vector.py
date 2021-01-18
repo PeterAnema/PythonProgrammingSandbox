@@ -1,6 +1,6 @@
 import math
 
-class Vector:
+class Vector(object):
     """A vector class"""
 
     __slots__ = ['_x', '_y']

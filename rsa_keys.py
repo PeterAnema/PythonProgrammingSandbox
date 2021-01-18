@@ -10,7 +10,7 @@
 # The encryption of m = 2 is c = 2**7 % 33 = 29
 # The decryption of c = 29 is m = 29**3 % 33 = 2
 
-import random
+import demo_random
 import itertools
 
 #PRIMES = (7, 11, 13, 17, 19)   # without 1, 2, 3, 5
@@ -54,7 +54,7 @@ def find_es(totient):
 def choose_e(totient):
     es = find_es(totient)
     es.discard(1)
-    return random.choice(tuple(es))
+    return demo_random.choice(tuple(es))
 
 def find_ds(e, totient):
     ds = set()
@@ -65,7 +65,7 @@ def find_ds(e, totient):
 
 def choose_d(e, totient):
     ds = find_ds(e, totient)
-    return random.choice(tuple(ds))
+    return demo_random.choice(tuple(ds))
 
 def choose_e_and_d(totient):
     while True:
@@ -134,9 +134,9 @@ if __name__  == '__main__':
     print('RSA asymetric encryption')
     print()
 
-    p = random.choice(PRIMES)          # A prime e.g. 3
+    p = demo_random.choice(PRIMES)          # A prime e.g. 3
     while True:
-        q = random.choice(PRIMES)      # Another prime e.g. 11
+        q = demo_random.choice(PRIMES)      # Another prime e.g. 11
         if p != q:
             break
 
@@ -147,7 +147,7 @@ if __name__  == '__main__':
     print()
 
     # encrypting and decrypting a number
-    number = random.randint(10, 99)     # to encrypt
+    number = demo_random.randint(10, 99)     # to encrypt
     print('random number %d' % number)
 
     print()
