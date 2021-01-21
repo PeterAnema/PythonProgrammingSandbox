@@ -19,6 +19,7 @@ def banner(text, c = '*'):
     s += c * (n + 2 * 3) + '\n'
     return s
 
+
 # def banner(text, c = '*', color_code = None):
 #     n = len(text)
 #     s = ''
